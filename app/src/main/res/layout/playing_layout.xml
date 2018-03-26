@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_background">
+
+    <ImageView
+        android:id="@+id/song_img"
+        android:layout_width="@dimen/img_size"
+        android:layout_height="@dimen/img_size"
+        android:layout_gravity="center"
+        android:src="@drawable/tsfh"
+        android:layout_marginTop="@dimen/img_top_marg"/>
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_marginTop="@dimen/song_top_marg"/>
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/seek_margin"
+        android:layout_marginRight="@dimen/seek_margin"
+        android:layout_marginTop="@dimen/seek_top_marg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/icons_top_marg">
+        <ImageView
+            android:layout_width="@dimen/nb_icon_size"
+            android:layout_height="@dimen/nb_icon_size"
+            android:layout_marginRight="@dimen/nb_margin"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/back_song_icon" />
+        <ImageView
+            android:layout_width="@dimen/play_size"
+            android:layout_height="@dimen/play_size"
+            android:src="@drawable/play_icon" />
+        <ImageView
+            android:layout_width="@dimen/nb_icon_size"
+            android:layout_height="@dimen/nb_icon_size"
+            android:layout_marginLeft="@dimen/nb_margin"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/next_song_icon" />
+    </LinearLayout>
+</LinearLayout>
