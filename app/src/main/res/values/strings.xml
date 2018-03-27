@@ -39,4 +39,6 @@
     <string name="tsfh_song9">Cannon In D Minor</string>
     <string name="tsfh_song10">Blackout</string>
     <string name="tsfh_song11">Stronger Faster Braver</string>
+    <string name="title_tab1">Artists</string>
+    <string name="title_tab2">Songs</string>
 </resources>

@@ -91,8 +91,8 @@ public class MainActivity extends FragmentActivity {
     //Setup the tabs adapter
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ArtistActivity(), "Artists");
-        adapter.addFragment(new SongActivity(), "Songs");
+        adapter.addFragment(new ArtistActivity(), getString(R.string.title_tab1));
+        adapter.addFragment(new SongActivity(), getString(R.string.title_tab2));
         viewPager.setAdapter(adapter);
     }
 
