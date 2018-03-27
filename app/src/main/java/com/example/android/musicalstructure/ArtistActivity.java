@@ -64,7 +64,7 @@ public class ArtistActivity extends Fragment {
                 /* Explicit intent */
                 Intent artistIntent = new Intent(getActivity(), ArtistSongs.class);
                 /* Extra intent to know which artist's list of songs we want to see. */
-                artistIntent.putExtra("artist", extraIntent);
+                artistIntent.putExtra(MainActivity.ARTIST, extraIntent);
                 startActivity(artistIntent);
             }
         });

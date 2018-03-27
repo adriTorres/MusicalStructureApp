@@ -24,7 +24,7 @@ public class ArtistSongs extends AppCompatActivity {
         /* Getting the intent */
         Intent myIntent = getIntent();
         /* Getting the extra intent String to know which artist list song we want to see. */
-        String artist = myIntent.getStringExtra("artist");
+        String artist = myIntent.getStringExtra(MainActivity.ARTIST);
 
         /* Setting the label toolbar to the name of the artist which list of song we are seeing */
         this.setTitle(artist);
@@ -48,8 +48,8 @@ public class ArtistSongs extends AppCompatActivity {
                 String extraIntent2 = listBottomTextView.getText().toString();
 
                 Intent artistIntent = new Intent(ArtistSongs.this, PlayingActivity.class);
-                artistIntent.putExtra("song", extraIntent);
-                artistIntent.putExtra("songArtist", extraIntent2);
+                artistIntent.putExtra(MainActivity.SONG, extraIntent);
+                artistIntent.putExtra(MainActivity.SONGARTIST, extraIntent2);
                 startActivity(artistIntent);
             }
         });

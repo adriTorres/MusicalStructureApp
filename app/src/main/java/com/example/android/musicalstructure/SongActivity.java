@@ -61,8 +61,8 @@ public class SongActivity extends Fragment  {
                 Intent artistIntent = new Intent(getActivity(), PlayingActivity.class);
 
                 /* Extra intent to know which song we want to listen */
-                artistIntent.putExtra("song", extraIntent);
-                artistIntent.putExtra("songArtist", extraIntent2);
+                artistIntent.putExtra(MainActivity.SONG, extraIntent);
+                artistIntent.putExtra(MainActivity.SONGARTIST, extraIntent2);
                 startActivity(artistIntent);
             }
         });

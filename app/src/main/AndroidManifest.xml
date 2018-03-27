@@ -19,10 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ArtistSongs"
-            android:label="Artist"/>
-        <activity android:name=".PlayingActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ArtistSongs" />
+        <activity
+            android:name=".PlayingActivity"
+            android:label="@string/playing_label">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

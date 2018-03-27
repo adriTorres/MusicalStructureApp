@@ -17,6 +17,11 @@ public class MainActivity extends FragmentActivity {
     //Main song storage structure using the artist name as key to the list of songs.
     private static LinkedHashMap<String, ArrayList<Song>> listSongs;
 
+    //Constant extra intent keys
+    public final static String SONG = "song";
+    public final static String ARTIST = "artist";
+    public final static String SONGARTIST = "songartist";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,43 +37,43 @@ public class MainActivity extends FragmentActivity {
         listSongs = new LinkedHashMap<>();
 
         //Create artists
-        Artist marshmello = new Artist("Marshmello", R.drawable.marshmello);
-        Artist sia = new Artist("Sia", R.drawable.sia);
-        Artist tsfh = new Artist("Two Steps From Hell", R.drawable.tsfh);
+        Artist marshmello = new Artist(getString(R.string.marshmello), R.drawable.marshmello);
+        Artist sia = new Artist(getString(R.string.sia), R.drawable.sia);
+        Artist tsfh = new Artist(getString(R.string.tsfh), R.drawable.tsfh);
 
         //Create songs related to artists.
-        marshSongs.add(new Song("Know me", marshmello));
-        marshSongs.add(new Song("Summer", marshmello));
-        marshSongs.add(new Song("Find me", marshmello));
-        marshSongs.add(new Song("Take it Back", marshmello));
-        marshSongs.add(new Song("Bounce", marshmello));
-        marshSongs.add(new Song("Blocks", marshmello));
-        marshSongs.add(new Song("Show you", marshmello));
-        marshSongs.add(new Song("Want U 2", marshmello));
-        marshSongs.add(new Song("Home ", marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song1), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song2), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song3), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song4), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song5), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song6), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song7), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song8), marshmello));
+        marshSongs.add(new Song(getString(R.string.marsh_song9), marshmello));
 
-        siaSongs.add(new Song("Bird Set Free", sia));
-        siaSongs.add(new Song("Alive", sia));
-        siaSongs.add(new Song("One Million Bullets", sia));
-        siaSongs.add(new Song("Move Your Body", sia));
-        siaSongs.add(new Song("Unstoppable", sia));
-        siaSongs.add(new Song("Cheap Thrills", sia));
-        siaSongs.add(new Song("Reaper", sia));
-        siaSongs.add(new Song("House On Fire", sia));
-        siaSongs.add(new Song("Footprints", sia));
-        siaSongs.add(new Song("Sweet Design", sia));
+        siaSongs.add(new Song(getString(R.string.sia_song1), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song2), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song3), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song4), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song5), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song6), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song7), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song8), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song9), sia));
+        siaSongs.add(new Song(getString(R.string.sia_song10), sia));
 
-        tsfhSongs.add(new Song("None Shall Live", tsfh));
-        tsfhSongs.add(new Song("Stormkeeper", tsfh));
-        tsfhSongs.add(new Song("Victory", tsfh));
-        tsfhSongs.add(new Song("Wolf King", tsfh));
-        tsfhSongs.add(new Song("Rise Above", tsfh));
-        tsfhSongs.add(new Song("Spellcaster", tsfh));
-        tsfhSongs.add(new Song("Never Back Down", tsfh));
-        tsfhSongs.add(new Song("Red Tower", tsfh));
-        tsfhSongs.add(new Song("Cannon In D Minor", tsfh));
-        tsfhSongs.add(new Song("Blackout", tsfh));
-        tsfhSongs.add(new Song("Stronger Faster Braver", tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song1), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song2), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song3), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song4), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song5), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song6), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song7), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song8), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song9), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song10), tsfh));
+        tsfhSongs.add(new Song(getString(R.string.tsfh_song11), tsfh));
 
         //Add list of songs to the hashmap using the artist name of the songs as key
         listSongs.put(marshmello.getName(), marshSongs);

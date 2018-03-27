@@ -22,8 +22,8 @@ public class PlayingActivity extends AppCompatActivity {
         Intent myIntent = getIntent();
 
         /* Setting the String that contains the song we want to listen. */
-        String song = myIntent.getStringExtra("song");
-        String artist = myIntent.getStringExtra("songArtist");
+        String song = myIntent.getStringExtra(MainActivity.SONG);
+        String artist = myIntent.getStringExtra(MainActivity.SONGARTIST);
 
         /* Views we want to modify */
         TextView songName = (TextView) findViewById(R.id.song_name);
